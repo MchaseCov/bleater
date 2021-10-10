@@ -1,0 +1,5 @@
+<% @bleats.reverse.each do |bleat| %>
+  <%= link_to bleat.user.username, profile_path(bleat.user.id) %>
+  <%= bleat.body %>
+  <br>
+<% end %>

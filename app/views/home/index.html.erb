@@ -1,4 +1,10 @@
 <div>
-  <h1>Home#index</h1>
-  <p>Find me in app/views/home/index.html.erb</p>
+  <h1>Welcome to Bleater.com</h1>
+  <p>Whats on your mind?</p>
 </div>
+<% if user_signed_in?%>
+  <div><%= render "bleats/new-bleat" %></div> <br> 
+<% else %>
+  <p><%= link_to "Sign Up", new_user_registration_path %> or <%= link_to "Sign In",  new_user_session_path %> to post your own Bleats!</p>
+<% end %>
+<div><%= render "bleats/bleats" %></div> <br> 

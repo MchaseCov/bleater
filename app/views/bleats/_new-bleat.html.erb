@@ -1,0 +1,11 @@
+<h3>Post a Bleat!</h3>
+<p>Bleats must be no more than 280 characters</p>
+<%= form_with model: [ @bleat ] do |form| %>
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
